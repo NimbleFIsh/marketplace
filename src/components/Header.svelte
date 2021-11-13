@@ -57,6 +57,7 @@
     }
 
     .header-inner-logo {
+        margin-right: 8px;
         width: 200px;
         cursor: pointer;
     }
@@ -118,7 +119,7 @@
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
         font-size: 18px;
-        color: #464646;
+        color: #3c3c3c;
     }
 
     .nav-bar-item, .header-inner-enter {

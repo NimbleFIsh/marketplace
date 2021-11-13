@@ -32,6 +32,7 @@
     .card {
         width: 16%;
         padding: 8px;
+        margin: 8px 0;
         border-radius: 15px;
         cursor: pointer;
     }
