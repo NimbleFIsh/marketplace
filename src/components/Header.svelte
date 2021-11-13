@@ -2,7 +2,6 @@
     import Icon from "@iconify/svelte";
     import {navigate} from "svelte-routing";
     import { createEventDispatcher } from 'svelte';
-    import Icon from "@iconify/svelte"
 
     const dispatch = createEventDispatcher();
 </script>

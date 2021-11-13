@@ -5,7 +5,7 @@
     import InputField from "../components/InputField.svelte";
     import PasswordField from "../components/PasswordField.svelte";
 
-    let showModalWindow = true;
+    let showModalWindow = false;
     let isLogin = true;
 
     let Login = {
@@ -19,6 +19,11 @@
         email: '',
         password: '',
         name: ''
+    }
+
+    function closeModalWindow() {
+       showModalWindow = false;
+       isLogin = true;
     }
 
 
@@ -59,7 +64,6 @@
 <div id="app">
     <div class="layout_page">
         <Header on:enterBtn={() => showModalWindow = true}/>
-        <Header/>
         <main>
             {#each tovarTest as tovar}
                 <Card {tovar} />
@@ -70,7 +74,7 @@
 <div class="popper__overlay">
     <div class="login__popper">
         {#if showModalWindow}
-            <ModalWindow on:close="{() => showModalWindow = false}">
+            <ModalWindow on:close="{closeModalWindow}">
                 <div class="window-header" slot="header">
                     <div class="{isLogin ? 'window-header-item-btn-active' : 'window-header-item-btn'}"
                          on:click={() => isLogin = true}
