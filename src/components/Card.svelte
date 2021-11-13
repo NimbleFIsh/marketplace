@@ -1,42 +1,45 @@
 <script>
     import ModalWindow from "../components/ModalWindow.svelte";
-    export let tovar;
+
+    export let product;
     let showCardPreview = false;
     let purchase = false;
 
-    function addToPurchase(e) { // Сергей ~ прочитай - поймёшь
-        const ls = localStorage['cart'] ? JSON.parse(localStorage['cart']) : []; // Чтение хранилища, если есть - читать, если нет - создать массив
-        ls.push(e.target.parentNode.parentNode.id); // Добавление id товара в массив
-        localStorage['cart'] = JSON.stringify(ls); // Перевод в строку и записс в хранилище
+    function addToPurchase(e) {
+        const ls = localStorage['cart'] ? JSON.parse(localStorage['cart']) : [];
+        ls.push(product);
+        localStorage['cart'] = JSON.stringify(ls);
     }
 
 </script>
 
 {#if showCardPreview}
     <ModalWindow on:close="{() => showCardPreview = false}">
-        <div class="card-name" slot="header">{tovar.title}</div>
+        <div class="card-name" slot="header">{product.title}</div>
         <div class="card-body">
             <!-- svelte-ignore a11y-img-redundant-alt -->
-            <div class="card-image"><img src={tovar.img} alt="tovar image" /></div>
+            <div class="card-image"><img src={product.img} alt="tovar image"/></div>
             <div class="card-description">
                 <div class="addToCartButton">Добавить в корзину</div>
-                <div class="card-text">{tovar.description}</div>
+                <div class="card-text">{product.description}</div>
             </div>
         </div>
     </ModalWindow>
 {/if}
 
-<div id={tovar.id} class="card" on:mouseenter={() => purchase = true} on:mouseleave={() => purchase = false}>
-    <div on:click = {() => showCardPreview = true}>
+<div id={product.id} class="card" on:mouseenter={() => purchase = true} on:mouseleave={() => purchase = false}>
+    <div on:click={() => showCardPreview = true}>
         <!-- svelte-ignore a11y-img-redundant-alt -->
-        <div class="image-conrainer"><img src={tovar.img} alt="tovar image" /></div>
+        <div class="image-conrainer"><img src={product.img} alt="tovar image"/></div>
         <div class="tovar-info">
-            <div class="tovar-price">{tovar.price.substring(0, tovar.price.length-3)}</div>
-            <div class="tovar-name">{tovar.title}</div>
+            <div class="tovar-price">{product.price.substring(0, product.price.length - 3)}</div>
+            <div class="tovar-name">{product.title}</div>
         </div>
     </div>
     {#if purchase}
-        <div class="purchase-container"><div class="purchase" on:click={addToPurchase}>Добавить в корзину</div></div>
+        <div class="purchase-container">
+            <button type="button" class="purchase" on:click={addToPurchase}>В корзину</button>
+        </div>
     {/if}
 </div>
 
@@ -46,8 +49,9 @@
         box-sizing: border-box;
         position: relative;
         width: 16%;
-        padding: 15px;
-        margin: 8px 0;
+        max-height: 320px;
+        padding: 8px;
+        margin: 8px;
         border-radius: 15px;
         cursor: pointer;
     }
@@ -55,7 +59,7 @@
     .card:hover {
         box-shadow: 0 0 20px rgb(0 0 0 / 10%);
     }
-   
+
     .tovar-name {
         color: #999;
         margin-bottom: 8px;
@@ -111,16 +115,41 @@
     .purchase-container {
         position: absolute;
         width: 100%;
-        margin-top: 5px;
+        height: 3.3rem;
+        margin-top: 8px;
         left: 0;
         display: flex;
-        justify-content: center;
-        bottom: -15px;
+        justify-content: flex-start;
+        bottom: -3rem;
         align-items: end;
-        padding: 0 0 5px 0;
+        padding: 0 0 8px 0;
         background-color: #fff;
         border-radius: 0 0 5px 5px;
-        box-shadow: 0px 5px 5px rgb(0 0 0 / 10%);
+        box-shadow: 0 5px 5px rgb(0 0 0 / 10%);
+
+        z-index: 1000;
+    }
+
+    .purchase {
+        padding: 4px 16px;
+        margin-left: 8px;
+
+        background: #10ad44;
+        color: #fff;
+
+        height: 28px;
+        width: 8rem;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .purchase:hover {
+        background: #086e28;
     }
 
 </style>

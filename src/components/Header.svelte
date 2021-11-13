@@ -139,7 +139,7 @@
     }
 
     .nav-bar-item:hover, .header-inner-enter:hover {
-        background: #fafafa;
+        background: #f0f0f0;
     }
 
 </style>

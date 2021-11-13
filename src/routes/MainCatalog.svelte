@@ -14,8 +14,8 @@
             <div class="wrapper-products-card">
                 <h1 class="wrapper-products-card-title"> Товары </h1>
                 <div class="wrapper-products-card-container">
-                    {#each testTovars as tovar}
-                        <Card {tovar}/>
+                    {#each testTovars as product}
+                        <Card {product}/>
                     {/each}
                 </div>
             </div>

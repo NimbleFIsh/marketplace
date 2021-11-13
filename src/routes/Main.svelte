@@ -38,9 +38,13 @@
         (Registration.email && confirmPass && confirmPass === Registration.password && Registration.password && Registration.name);
 
     function checkAndSend() {
-        fetch(SERVERHOST + '/api/v1/' + (isLogin ? 'login' : 'register'), { 'method': 'POST', 'body': JSON.stringify(isLogin ? Login : Registration) })
-        .then(console.log);
+        fetch(SERVERHOST + '/api/v1/' + (isLogin ? 'login' : 'register'), {
+            'method': 'POST',
+            'body': JSON.stringify(isLogin ? Login : Registration)
+        })
+            .then(console.log);
     }
+
     if (!localStorage['cart'] || !localStorage['cart'].includes('[')) localStorage['cart'] = JSON.stringify([]);
 </script>
 
@@ -54,10 +58,10 @@
                     on:favoriteBtn={() => navigate('/favorite')}
             />
             <Route path="/">
-                <Checkout/>
+                <MainCatalog/>
             </Route>
             <Route path="/cart">
-                <MainCatalog/>
+                <Checkout/>
             </Route>
         </div>
     </div>
@@ -91,7 +95,8 @@
                                     </div>
                                 </div>
                                 <div class="buttons">
-                                    <button class="login-button" type="button" disabled={!clickable} on:click={checkAndSend}>
+                                    <button class="login-button" type="button" disabled={!clickable}
+                                            on:click={checkAndSend}>
                                         Вход
                                     </button>
                                 </div>
@@ -114,7 +119,8 @@
                                     </div>
                                 </div>
                                 <div class="buttons">
-                                    <button class="login-button" type="button" disabled={!clickable} on:click={checkAndSend}>
+                                    <button class="login-button" type="button" disabled={!clickable}
+                                            on:click={checkAndSend}>
                                         Зарегестрироваться
                                     </button>
                                 </div>

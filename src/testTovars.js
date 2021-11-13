@@ -1,4 +1,4 @@
-export const testTovars = [
+export let testTovars = [
     {
         "img": "https://z-fermer.ru/images/shop/736_1.jpg",
         "title": "Базилик от Знатного Фермера, 50 гр.",
