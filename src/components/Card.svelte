@@ -117,7 +117,7 @@
         padding: 0 0 5px 0;
         background-color: #fff;
         border-radius: 0 0 5px 5px;
-        box-shadow: 0px 20px 20px rgb(0 0 0 / 10%);
+        box-shadow: 0px 5px 20px rgb(0 0 0 / 10%);
     }
 
 </style>
