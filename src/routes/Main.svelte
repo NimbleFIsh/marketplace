@@ -6,6 +6,8 @@
     import PasswordField from "../components/PasswordField.svelte";
     import { testTovars } from '../testTovars.js';
 
+    const SERVERHOST = '';
+
     let showModalWindow = false;
     let isLogin = true;
 
@@ -28,23 +30,31 @@
     }
 
     if (!localStorage['cart'] || !localStorage['cart'].includes('[')) localStorage['cart'] = JSON.stringify([]);
+
+    let clickable = false;
+    $: clickable = isLogin ? (Login.login && Login.password) :
+        (Registration.email && confirmPass && confirmPass === Registration.password && Registration.password && Registration.name);
+
+    function checkAndSend() {
+        fetch(SERVERHOST + '/api/v1/' + (isLogin ? 'login' : 'register'), { 'method': 'POST', 'body': JSON.stringify(isLogin ? Login : Registration) })
+        .then(console.log);
+    }
 </script>
 
 <div id="app">
     <div class="layout_page">
+        <!-- svelte-ignore missing-declaration -->
         <Header on:enterBtn={() => showModalWindow = true}/>
         <main id="mainContainer">
             <div class="mainContainer-inner">
                 <div class="wrapper">
-                    <div class="wrapper-banner">
-                        <div class="banner-container">
-                            <!--                            <img class="banner-container-image" src="/img/Background.jpg" alt="banner-background"/>-->
-                        </div>
-                    </div>
+                    <div class="wrapper-banner"><div class="banner-container"></div></div>
                     <div class="wrapper-products-card">
                         <h1 class="wrapper-products-card-title"> Товары </h1>
                         <div class="wrapper-products-card-container">
+                            <!-- svelte-ignore missing-declaration -->
                             {#each testTovars as tovar}
+                                <!-- svelte-ignore missing-declaration -->
                                 <Card {tovar}/>
                             {/each}
                         </div>
@@ -60,17 +70,14 @@
 <div class="popper__overlay">
     <div class="login__popper">
         {#if showModalWindow}
+            <!-- svelte-ignore missing-declaration -->
             <ModalWindow on:close="{closeModalWindow}">
                 <div class="window-header" slot="header">
-                    <div class="{isLogin ? 'window-header-item-btn-active' : 'window-header-item-btn'}"
-                         on:click={() => isLogin = true}
-                    >
+                    <div class="{isLogin ? 'window-header-item-btn-active' : 'window-header-item-btn'}" on:click={() => isLogin = true}>
                         Войдите
                     </div>
                     <div class="window-header-item">или</div>
-                    <div class="{!isLogin ? 'window-header-item-btn-active' : 'window-header-item-btn'}"
-                         on:click={() => isLogin = false}
-                    >
+                    <div class="{!isLogin ? 'window-header-item-btn-active' : 'window-header-item-btn'}" on:click={() => isLogin = false}>
                         Зарегестрируйтесь
                     </div>
                 </div>
@@ -82,14 +89,11 @@
                                     <InputField bind:bindText={Login.login} placeholderText="Email"/>
                                 </div>
                                 <div class="login-fields-item">
-                                    <PasswordField bind:password={Login.password} placeholderText="Пароль"
-                                                   newPass="false"/>
+                                    <PasswordField bind:password={Login.password} placeholderText="Пароль" newPass="false"/>
                                 </div>
                             </div>
                             <div class="buttons">
-                                <button class="login-button" type="button">
-                                    Вход
-                                </button>
+                                <button class="login-button" type="button" disabled={!clickable} on:click={checkAndSend}>Вход</button>
                             </div>
                             <div class="void"></div>
                         {:else}
@@ -98,21 +102,17 @@
                                     <InputField bind:bindText={Registration.email} placeholderText="Email"/>
                                 </div>
                                 <div class="login-fields-item">
-                                    <PasswordField bind:password={Registration.password} placeholderText="Пароль"
-                                                   newPass="true"/>
+                                    <PasswordField bind:password={Registration.password} placeholderText="Пароль" newPass="true"/>
                                 </div>
                                 <div class="login-fields-item">
-                                    <PasswordField bind:password={confirmPass} placeholderText="Подтвердите пароль"
-                                                   newPass="true"/>
+                                    <PasswordField bind:password={confirmPass} placeholderText="Подтвердите пароль" newPass="true"/>
                                 </div>
                                 <div class="login-fields-item">
                                     <InputField bind:bindText={Registration.name} placeholderText="Имя"/>
                                 </div>
                             </div>
                             <div class="buttons">
-                                <button class="login-button" type="button">
-                                    Зарегестрироваться
-                                </button>
+                                <button class="login-button" type="button" disabled={!clickable} on:click={checkAndSend}>Зарегестрироваться</button>
                             </div>
                             <div class="void"></div>
                         {/if}
@@ -288,8 +288,9 @@
         align-items: baseline;
     }
 
-    .modal {
-        z-index: 2;
+    button:disabled {
+        filter: grayscale(1);
+        cursor: not-allowed;
     }
 
 </style>
