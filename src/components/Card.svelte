@@ -101,6 +101,7 @@
 
     .card-image > img {
         width: 100%;
+        border-radius: 5px;
     }
 
     .card-description {
@@ -119,7 +120,7 @@
         padding: 0 0 5px 0;
         background-color: #fff;
         border-radius: 0 0 5px 5px;
-        box-shadow: 0px 5px 20px rgb(0 0 0 / 10%);
+        box-shadow: 0px 5px 5px rgb(0 0 0 / 10%);
     }
 
 </style>
