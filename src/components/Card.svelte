@@ -2,6 +2,12 @@
     import ModalWindow from "../components/ModalWindow.svelte";
     export let tovar;
     let showCardPreview = false;
+    let purchase = false;
+
+    function addToPurchase(e) {
+
+    }
+
 </script>
 
 {#if showCardPreview}
@@ -18,21 +24,27 @@
     </ModalWindow>
 {/if}
 
-<div class="card" on:click = {() => showCardPreview = true}>
-    <!-- svelte-ignore a11y-img-redundant-alt -->
-    <div class="image-conrainer"><img src={tovar.img} alt="tovar image" /></div>
-    <div class="tovar-info">
-        <div class="tovar-price">{tovar.price.substring(0, tovar.price.length-3)}</div>
-        <div class="tovar-name">{tovar.title}</div>
+<div class="card" on:mouseenter={() => purchase = true} on:mouseleave={() => purchase = false}>
+    <div on:click = {() => showCardPreview = true}>
+        <!-- svelte-ignore a11y-img-redundant-alt -->
+        <div class="image-conrainer"><img src={tovar.img} alt="tovar image" /></div>
+        <div class="tovar-info">
+            <div class="tovar-price">{tovar.price.substring(0, tovar.price.length-3)}</div>
+            <div class="tovar-name">{tovar.title}</div>
+        </div>
     </div>
+    {#if purchase}
+        <div class="purchase-container"><div class="purchase" on:click={addToPurchase}>Добавить в корзину</div></div>
+    {/if}
 </div>
 
 <style>
 
     .card {
         box-sizing: border-box;
+        position: relative;
         width: 16%;
-        padding: 8px;
+        padding: 15px;
         margin: 8px 0;
         border-radius: 15px;
         cursor: pointer;
@@ -44,6 +56,7 @@
    
     .tovar-name {
         color: #999;
+        margin-bottom: 8px;
     }
 
     .tovar-price {
@@ -66,32 +79,45 @@
     }
 
     .addToCartButton {
+        margin-top: 15px;
         cursor: pointer;
         margin-bottom: 15px;
     }
 
     .card-name {
-
+        margin-bottom: 10px;
     }
 
     .card-body {
-
+        display: flex;
     }
 
     .card-image {
+        width: 60%;
+        margin-right: 15px;
+    }
 
+    .card-image > img {
+        width: 100%;
     }
 
     .card-description {
-
+        width: 30%;
     }
 
-    .card-text {
-
-    }
-
-    .modal {
-        z-index: 2;
+    .purchase-container {
+        position: absolute;
+        width: 100%;
+        margin-top: 5px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        bottom: -15px;
+        align-items: end;
+        padding: 0 0 5px 0;
+        background-color: #fff;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0px 20px 20px rgb(0 0 0 / 10%);
     }
 
 </style>
