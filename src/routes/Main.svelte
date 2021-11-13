@@ -22,52 +22,69 @@
     }
 
     function closeModalWindow() {
-       showModalWindow = false;
-       isLogin = true;
+        showModalWindow = false;
+        isLogin = true;
     }
 
 
     const tovarTest = [
-    {
-        'name': 'Test 1',
-        'price': 100,
-        'img': '/img/Logo.jpg'
-    },
-    {
-        'name': 'Test 2',
-        'price': 100,
-        'img': '/img/Logo.jpg'
-    },
-    {
-        'name': 'Test 3',
-        'price': 100,
-        'img': '/img/Logo.jpg'
-    },
-    {
-        'name': 'Test 4',
-        'price': 100,
-        'img': '/img/Logo.jpg'
-    },
-    {
-        'name': 'Test 5',
-        'price': 100,
-        'img': '/img/Logo.jpg'
-    },
-    {
-        'name': 'Test 6',
-        'price': 350,
-        'img': '/img/Logo.jpg'
-    }
+        {
+            'name': 'Test 1',
+            'price': 100,
+            'img': '/img/Logo.jpg'
+        },
+        {
+            'name': 'Test 2',
+            'price': 100,
+            'img': '/img/Logo.jpg'
+        },
+        {
+            'name': 'Test 3',
+            'price': 100,
+            'img': '/img/Logo.jpg'
+        },
+        {
+            'name': 'Test 4',
+            'price': 100,
+            'img': '/img/Logo.jpg'
+        },
+        {
+            'name': 'Test 5',
+            'price': 100,
+            'img': '/img/Logo.jpg'
+        },
+        {
+            'name': 'Test 6',
+            'price': 350,
+            'img': '/img/Logo.jpg'
+        }
     ];
 </script>
 
 <div id="app">
     <div class="layout_page">
         <Header on:enterBtn={() => showModalWindow = true}/>
-        <main>
-            {#each tovarTest as tovar}
-                <Card {tovar} />
-            {/each}
+        <main id="mainContainer">
+            <div class="mainContainer-inner">
+                <div class="wrapper">
+                    <div class="wrapper-banner">
+                        <div class="banner-container">
+                            <!--                            <img class="banner-container-image" src="/img/Background.jpg" alt="banner-background"/>-->
+                        </div>
+                    </div>
+                    <div class="wrapper-products-card">
+                        <h1 class="wrapper-products-card-title"> Товары </h1>
+                        <div class="wrapper-products-card-container">
+                            {#each tovarTest as tovar}
+                                <Card {tovar}/>
+                            {/each}
+                        </div>
+                    </div>
+                    <div class="wrapper-footer">
+                        <!--TODO:-->
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 </div>
@@ -96,7 +113,8 @@
                                     <InputField bind:bindText={Login.login} placeholderText="Email"/>
                                 </div>
                                 <div class="login-fields-item">
-                                    <PasswordField bind:password={Login.password} placeholderText="Пароль" newPass="false"/>
+                                    <PasswordField bind:password={Login.password} placeholderText="Пароль"
+                                                   newPass="false"/>
                                 </div>
                             </div>
                             <div class="buttons">
@@ -111,10 +129,12 @@
                                     <InputField bind:bindText={Registration.email} placeholderText="Email"/>
                                 </div>
                                 <div class="login-fields-item">
-                                    <PasswordField bind:password={Registration.password} placeholderText="Пароль" newPass="true"/>
+                                    <PasswordField bind:password={Registration.password} placeholderText="Пароль"
+                                                   newPass="true"/>
                                 </div>
                                 <div class="login-fields-item">
-                                    <PasswordField bind:password={confirmPass} placeholderText="Подтвердите пароль" newPass="true"/>
+                                    <PasswordField bind:password={confirmPass} placeholderText="Подтвердите пароль"
+                                                   newPass="true"/>
                                 </div>
                                 <div class="login-fields-item">
                                     <InputField bind:bindText={Registration.name} placeholderText="Имя"/>
@@ -229,11 +249,75 @@
         font-weight: 400;
     }
 
-    main {
+    #mainContainer {
+        width: 100vw;
+        min-height: calc(100vh - 4rem - 1px);
+        height: calc(100vh - 4rem - 1px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .mainContainer-inner {
+        width: 100%;
+        height: 100%;
+
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+    .wrapper-banner {
+        width: 100%;
+        height: 370px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .banner-container {
+        width: 100%;
+        min-width: 650px;
+        max-height: 370px;
+
+        display: flex;
+        justify-content: center;
+
+        background: url("/img/Background.jpg") center bottom no-repeat;
+        background-size: cover;
+
+        border-radius: 16px;
+    }
+
+    .banner-container-image {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    .wrapper-products-card {
         margin-top: 10px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper-products-card-title {
+        margin: 16px 0;
+        font-size: 36px;
+    }
+
+    .wrapper-products-card-container {
         display: flex;
         justify-content: space-between;
-        padding: 0 15px;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+
     }
 
 </style>
