@@ -1,18 +1,18 @@
 <script lang="ts">
-    import Icon from "@iconify/svelte"
-
+    import Icon from "@iconify/svelte";
+    import {navigate} from "svelte-routing";
 </script>
 
 <header class="header">
     <div class="header-inner">
-        <div class="header-inner-logo">
-            выф
+        <div class="header-inner-logo" on:click={() => navigate('/')}>
+            <img src="/img/Logo.jpg" alt="marketplace logo" />
         </div>
         <div class="header-inner-search">
             <div class="search-field">
-                <input class="search-field-input" placeholder="Найти ферерский товар...">
+                <input class="search-field-input" placeholder="Найти ферерский товар..." />
                 <div class="search-field-icon-holder">
-                    <Icon class="search-field-icon" icon="bi:search"/>
+                    <Icon class="search-field-icon" icon="bi:search" />
                 </div>
             </div>
         </div>
@@ -54,6 +54,10 @@
 
     .header-inner-logo {
         width: 200px;
+    }
+
+    .header-inner-logo > img {
+        width: inherit;
     }
 
     .header-inner-search {
@@ -120,11 +124,13 @@
         margin: 0 4px;
         padding: 8px;
         box-sizing: border-box;
+        cursor: pointer;
     }
 
     .header-inner-enter {
         margin: 0 8px;
         padding: 0 16px;
+        cursor: pointer;
     }
 
 </style>
