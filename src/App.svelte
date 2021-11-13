@@ -1,26 +1,13 @@
 <script>
-	import {Route, Router} from "svelte-routing";
-	import Main from "./routes/Main.svelte"
-	import Notfound from "./routes/Notfound.svelte";
-	import {navigate} from "svelte-routing";
-
-	navigate('/')
+    import Main from "./routes/Main.svelte"
 </script>
 
-
-<Router>
-	<Route path="/">
-		<Main/>
-	</Route>
-	<Route path="/*">
-		<Notfound/>
-	</Route>
-</Router>
+<Main/>
 
 <style>
-	:global(body) {
-		margin: 0;
-		padding: 0;
-		overflow-x: hidden;
-	}
+    :global(body) {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
 </style>

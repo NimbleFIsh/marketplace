@@ -21,13 +21,13 @@
         </div>
         <div class="header-inner-nav_bar">
             <nav class="nav-bar">
-                <div class="nav-bar-item">Профиль</div>
-                <div class="nav-bar-item">Корзина</div>
-                <div class="nav-bar-item">Заказы</div>
-                <div class="nav-bar-item">Избраное</div>
+                <div class="nav-bar-item" on:click={() => dispatch('profileBtn')}>Профиль</div>
+                <div class="nav-bar-item" on:click={() => dispatch('cartBtn')}>Корзина</div>
+                <div class="nav-bar-item" on:click={() => dispatch('orderBtn')}>Заказы</div>
+                <div class="nav-bar-item" on:click={() => dispatch('favoriteBtn')}>Избраное</div>
                 <div class="nav-bar-item-last"></div>
             </nav>
-            <div class="header-inner-enter" on:click="{() => dispatch('enterBtn')}">
+            <div class="header-inner-enter" on:click={() => dispatch('enterBtn')}>
                 <div>Войти</div>
             </div>
         </div>
@@ -120,7 +120,7 @@
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
         font-size: 18px;
-        color: #3c3c3c;
+        color: #001a34;
     }
 
     .nav-bar-item, .header-inner-enter {
