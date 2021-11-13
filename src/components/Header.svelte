@@ -40,7 +40,8 @@
         height: 4rem;
         width: 100%;
 
-        border-bottom: 1px solid lightgrey;
+        border-bottom: 1px solid rgba(0,26,52,.16);;
+        z-index: 1000;
     }
 
     .header-inner {
@@ -139,10 +140,6 @@
 
     .nav-bar-item:hover, .header-inner-enter:hover {
         background: #fafafa;
-    }
-
-    .modal {
-        z-index: 2;
     }
 
 </style>

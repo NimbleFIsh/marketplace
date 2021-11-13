@@ -78,6 +78,8 @@
         flex-grow: 0;
 
         overflow-y: hidden;
+
+        z-index: 1000;
     }
 
     .modal-container {
