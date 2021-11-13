@@ -1,6 +1,8 @@
 <script lang="ts">
+    import { createEventDispatcher } from 'svelte';
     import Icon from "@iconify/svelte"
 
+    const dispatch = createEventDispatcher();
 </script>
 
 <header class="header">
@@ -22,8 +24,9 @@
                 <div class="nav-bar-item">Корзина</div>
                 <div class="nav-bar-item">Заказы</div>
                 <div class="nav-bar-item">Избраное</div>
+                <div class="nav-bar-item-last"></div>
             </nav>
-            <div class="header-inner-enter">
+            <div class="header-inner-enter" on:click="{() => dispatch('enterBtn')}">
                 <div>Войти</div>
             </div>
         </div>
@@ -105,26 +108,29 @@
         justify-content: space-between;
         align-items: center;
 
+        height: 100%;
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
         font-size: 18px;
         color: #464646;
     }
 
-    .nav-bar {
-        border-right: 1px solid #333333;
-        padding: 0 12px;
-    }
-
-    .nav-bar-item {
-        margin: 0 4px;
-        padding: 8px;
+    .nav-bar-item, .header-inner-enter {
+        height: 100%;
+        padding: 8px 16px;
         box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
     }
 
-    .header-inner-enter {
-        margin: 0 8px;
-        padding: 0 16px;
+    .nav-bar-item-last {
+        height: 40px;
+        border-right: 1px solid #999999;
+    }
+
+    .nav-bar-item:hover, .header-inner-enter:hover {
+        background: #fafafa;
     }
 
 </style>

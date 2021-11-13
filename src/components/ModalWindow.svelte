@@ -65,7 +65,7 @@
         left: 50%;
         top: 50%;
         width: calc(100vw - 4em);
-        max-height: 335px;
+        max-height: 580px;
         transform: translate(-50%, -50%);
         padding: 1em;
         background: none;
