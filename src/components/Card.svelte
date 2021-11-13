@@ -91,7 +91,7 @@
     }
 
     .modal {
-        z-index: 3;
+        z-index: 2;
     }
 
 </style>

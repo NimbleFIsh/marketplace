@@ -141,4 +141,8 @@
         background: #fafafa;
     }
 
+    .modal {
+        z-index: 2;
+    }
+
 </style>

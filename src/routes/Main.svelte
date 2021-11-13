@@ -222,6 +222,7 @@
         height: calc(100vh - 4rem - 1px);
         overflow-y: auto;
         overflow-x: hidden;
+        z-index: 1;
     }
 
     .mainContainer-inner {
@@ -282,9 +283,11 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        align-content: center;
-        align-items: center;
+        align-items: baseline;
+    }
 
+    .modal {
+        z-index: 2;
     }
 
 </style>
