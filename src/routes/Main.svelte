@@ -8,6 +8,8 @@
     import PasswordField from "../components/PasswordField.svelte";
     import MainCatalog from "./MainCatalog.svelte";
 
+    const SERVERHOST = '';
+
     let showModalWindow = false;
     let isLogin = true;
 
@@ -29,6 +31,16 @@
         isLogin = true;
     }
 
+    if (!localStorage['cart'] || !localStorage['cart'].includes('[')) localStorage['cart'] = JSON.stringify([]);
+
+    let clickable = false;
+    $: clickable = isLogin ? (Login.login && Login.password) :
+        (Registration.email && confirmPass && confirmPass === Registration.password && Registration.password && Registration.name);
+
+    function checkAndSend() {
+        fetch(SERVERHOST + '/api/v1/' + (isLogin ? 'login' : 'register'), { 'method': 'POST', 'body': JSON.stringify(isLogin ? Login : Registration) })
+        .then(console.log);
+    }
     if (!localStorage['cart'] || !localStorage['cart'].includes('[')) localStorage['cart'] = JSON.stringify([]);
 </script>
 
@@ -79,7 +91,7 @@
                                     </div>
                                 </div>
                                 <div class="buttons">
-                                    <button class="login-button" type="button">
+                                    <button class="login-button" type="button" disabled={!clickable} on:click={checkAndSend}>
                                         Вход
                                     </button>
                                 </div>
@@ -102,7 +114,7 @@
                                     </div>
                                 </div>
                                 <div class="buttons">
-                                    <button class="login-button" type="button">
+                                    <button class="login-button" type="button" disabled={!clickable} on:click={checkAndSend}>
                                         Зарегестрироваться
                                     </button>
                                 </div>
