@@ -1,14 +1,53 @@
 <script lang="ts">
     import Header from "../components/Header.svelte";
+    import Card from "../components/Card.svelte";
     import ModalWindow from "../components/ModalWindow.svelte";
 
-    let showModalWindow = true; // Юра, эта переключатель для окна с логиом/регистрацией🙃
+    let showModalWindow = true;
     let isLogin = true;
+
+    const tovarTest = [
+    {
+        'name': 'Test 1',
+        'price': 100,
+        'img': '/img/Logo.jpg'
+    },
+    {
+        'name': 'Test 2',
+        'price': 100,
+        'img': '/img/Logo.jpg'
+    },
+    {
+        'name': 'Test 3',
+        'price': 100,
+        'img': '/img/Logo.jpg'
+    },
+    {
+        'name': 'Test 4',
+        'price': 100,
+        'img': '/img/Logo.jpg'
+    },
+    {
+        'name': 'Test 5',
+        'price': 100,
+        'img': '/img/Logo.jpg'
+    },
+    {
+        'name': 'Test 6',
+        'price': 350,
+        'img': '/img/Logo.jpg'
+    }
+    ];
 </script>
 
 <div id="app">
     <div class="layout_page">
         <Header/>
+        <main>
+            {#each tovarTest as tovar}
+                <Card {tovar} />
+            {/each}
+        </main>
     </div>
 </div>
 <div class="popper__overlay">
@@ -61,6 +100,13 @@
         font-weight: 400;
         font-size: 18px;
         color: rgba(0, 0, 0, 0.3);
+    }
+
+    main {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
     }
 
 </style>

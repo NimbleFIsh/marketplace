@@ -10,7 +10,7 @@
         </div>
         <div class="header-inner-search">
             <div class="search-field">
-                <input class="search-field-input" placeholder="Найти ферерский товар..." />
+                <input class="search-field-input" placeholder="Найти фермерский товар..." />
                 <div class="search-field-icon-holder">
                     <Icon class="search-field-icon" icon="bi:search" />
                 </div>
@@ -54,6 +54,7 @@
 
     .header-inner-logo {
         width: 200px;
+        cursor: pointer;
     }
 
     .header-inner-logo > img {
