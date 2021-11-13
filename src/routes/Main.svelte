@@ -26,6 +26,8 @@
         showModalWindow = false;
         isLogin = true;
     }
+
+    if (!localStorage['cart'] && !localStorage['cart'].includes('[')) localStorage['cart'] = JSON.stringify([]);
 </script>
 
 <div id="app">

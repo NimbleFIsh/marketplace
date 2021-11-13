@@ -5,9 +5,9 @@
     let purchase = false;
 
     function addToPurchase(e) { // Сергей ~ прочитай - поймёшь
-        const ls = localStorage['purchase'] ? JSON.parse(localStorage['purchase']) : []; // Чтение хранилища, если есть - читать, если нет - создать массив
+        const ls = localStorage['cart'] ? JSON.parse(localStorage['cart']) : []; // Чтение хранилища, если есть - читать, если нет - создать массив
         ls.push(e.target.parentNode.parentNode.id); // Добавление id товара в массив
-        localStorage['purchase'] = JSON.stringify(ls); // Перевод в строку и записс в хранилище
+        localStorage['cart'] = JSON.stringify(ls); // Перевод в строку и записс в хранилище
     }
 
 </script>
