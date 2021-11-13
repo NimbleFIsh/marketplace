@@ -9,7 +9,7 @@
 <header class="header">
     <div class="header-inner">
         <div class="header-inner-logo" on:click={() => navigate('/')}>
-            <img src="/img/Logo.jpg" alt="marketplace logo" />
+            <!-- <img src="/img/Logo.jpg" alt="marketplace logo" /> -->
         </div>
         <div class="header-inner-search">
             <div class="search-field">
@@ -40,7 +40,7 @@
         height: 4rem;
         width: 100%;
 
-        border-bottom: 1px solid #333333;
+        border-bottom: 1px solid lightgrey;
     }
 
     .header-inner {

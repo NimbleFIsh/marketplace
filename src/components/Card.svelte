@@ -22,7 +22,7 @@
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <div class="image-conrainer"><img src={tovar.img} alt="tovar image" /></div>
     <div class="tovar-info">
-        <div class="tovar-price">{tovar.price}</div>
+        <div class="tovar-price">{tovar.price.substring(0, tovar.price.length-3)}</div>
         <div class="tovar-name">{tovar.title}</div>
     </div>
 </div>
@@ -30,6 +30,7 @@
 <style>
 
     .card {
+        box-sizing: border-box;
         width: 16%;
         padding: 8px;
         margin: 8px 0;
@@ -46,17 +47,22 @@
     }
 
     .tovar-price {
+        font-size: 18px;
         font-weight: bold;
+        margin-bottom: 5px;
     }
 
     .image-conrainer {
         position: relative;
         display: flex;
         justify-content: center;
+        margin-bottom: 5px;
     }
 
     .image-conrainer > img {
         width: 100%;
+        z-index: 1;
+        border-radius: 5px;
     }
 
     .addToCartButton {
@@ -82,6 +88,10 @@
 
     .card-text {
 
+    }
+
+    .modal {
+        z-index: 3;
     }
 
 </style>
