@@ -58,6 +58,8 @@
         width: 100%;
         height: 100%;
         background: none;
+
+        z-index: 1000;
     }
 
     .modal {
