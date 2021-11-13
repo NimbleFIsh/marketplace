@@ -4,6 +4,7 @@
     import ModalWindow from "../components/ModalWindow.svelte";
     import InputField from "../components/InputField.svelte";
     import PasswordField from "../components/PasswordField.svelte";
+    import { testTovars } from '../testTovars.js';
 
     let showModalWindow = false;
     let isLogin = true;
@@ -25,47 +26,13 @@
        showModalWindow = false;
        isLogin = true;
     }
-
-
-    const tovarTest = [
-    {
-        'name': 'Test 1',
-        'price': 100,
-        'img': '/img/Logo.jpg'
-    },
-    {
-        'name': 'Test 2',
-        'price': 100,
-        'img': '/img/Logo.jpg'
-    },
-    {
-        'name': 'Test 3',
-        'price': 100,
-        'img': '/img/Logo.jpg'
-    },
-    {
-        'name': 'Test 4',
-        'price': 100,
-        'img': '/img/Logo.jpg'
-    },
-    {
-        'name': 'Test 5',
-        'price': 100,
-        'img': '/img/Logo.jpg'
-    },
-    {
-        'name': 'Test 6',
-        'price': 350,
-        'img': '/img/Logo.jpg'
-    }
-    ];
 </script>
 
 <div id="app">
     <div class="layout_page">
         <Header on:enterBtn={() => showModalWindow = true}/>
         <main>
-            {#each tovarTest as tovar}
+            {#each testTovars as tovar}
                 <Card {tovar} />
             {/each}
         </main>
