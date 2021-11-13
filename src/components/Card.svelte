@@ -4,8 +4,10 @@
     let showCardPreview = false;
     let purchase = false;
 
-    function addToPurchase(e) {
-
+    function addToPurchase(e) { // Сергей ~ прочитай - поймёшь
+        const ls = localStorage['purchase'] ? JSON.parse(localStorage['purchase']) : []; // Чтение хранилища, если есть - читать, если нет - создать массив
+        ls.push(e.target.parentNode.parentNode.id); // Добавление id товара в массив
+        localStorage['purchase'] = JSON.stringify(ls); // Перевод в строку и записс в хранилище
     }
 
 </script>
@@ -24,7 +26,7 @@
     </ModalWindow>
 {/if}
 
-<div class="card" on:mouseenter={() => purchase = true} on:mouseleave={() => purchase = false}>
+<div id={tovar.id} class="card" on:mouseenter={() => purchase = true} on:mouseleave={() => purchase = false}>
     <div on:click = {() => showCardPreview = true}>
         <!-- svelte-ignore a11y-img-redundant-alt -->
         <div class="image-conrainer"><img src={tovar.img} alt="tovar image" /></div>

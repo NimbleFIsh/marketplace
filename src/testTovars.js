@@ -5,7 +5,8 @@ export const testTovars = [
         "price": "75 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 1
     },
     {
         "img": "https://z-fermer.ru/images/shop/740_1.jpg",
@@ -13,7 +14,8 @@ export const testTovars = [
         "price": "47 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 2
     },
     {
         "img": "https://z-fermer.ru/images/shop/730_1.jpg",
@@ -21,7 +23,8 @@ export const testTovars = [
         "price": "37 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 3
     },
     {
         "img": "https://z-fermer.ru/images/shop/803_1.jpg",
@@ -29,7 +32,8 @@ export const testTovars = [
         "price": "345 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 4
     },
     {
         "img": "https://z-fermer.ru/images/shop/800_1.jpg",
@@ -37,7 +41,8 @@ export const testTovars = [
         "price": "135 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 5
     },
     {
         "img": "https://z-fermer.ru/images/shop/708_1.jpg",
@@ -45,7 +50,8 @@ export const testTovars = [
         "price": "90 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 6
     },
     {
         "img": "https://z-fermer.ru/images/shop/706_1.jpg",
@@ -53,7 +59,8 @@ export const testTovars = [
         "price": "120 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 7
     },
     {
         "img": "https://z-fermer.ru/images/shop/705_1.jpg",
@@ -61,7 +68,8 @@ export const testTovars = [
         "price": "195 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 8
     },
     {
         "img": "https://z-fermer.ru/images/shop/714_1.jpg",
@@ -69,7 +77,8 @@ export const testTovars = [
         "price": "120 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 9
     },
     {
         "img": "https://z-fermer.ru/images/shop/799_1.jpg",
@@ -77,7 +86,8 @@ export const testTovars = [
         "price": "120 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 10
     },
     {
         "img": "https://z-fermer.ru/images/shop/801_1.jpg",
@@ -85,7 +95,8 @@ export const testTovars = [
         "price": "120 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 11
     },
     {
         "img": "https://z-fermer.ru/images/shop/737_1.jpg",
@@ -93,7 +104,8 @@ export const testTovars = [
         "price": "37 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 12
     },
     {
         "img": "https://z-fermer.ru/images/shop/735_1.jpg",
@@ -101,7 +113,8 @@ export const testTovars = [
         "price": "75 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 13
     },
     {
         "img": "https://z-fermer.ru/images/shop/731_1.jpg",
@@ -109,7 +122,8 @@ export const testTovars = [
         "price": "49 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 14
     },
     {
         "img": "https://z-fermer.ru/images/shop/734_1.jpg",
@@ -117,7 +131,8 @@ export const testTovars = [
         "price": "37 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 15
     },
     {
         "img": "https://z-fermer.ru/images/shop/807_1.jpg",
@@ -125,7 +140,8 @@ export const testTovars = [
         "price": "230 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 16
     },
     {
         "img": "https://z-fermer.ru/images/shop/732_1.jpg",
@@ -133,7 +149,8 @@ export const testTovars = [
         "price": "49 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 17
     },
     {
         "img": "https://z-fermer.ru/images/shop/733_1.jpg",
@@ -141,7 +158,8 @@ export const testTovars = [
         "price": "45 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 18
     },
     {
         "img": "https://z-fermer.ru/images/shop/802_1.jpg",
@@ -149,7 +167,8 @@ export const testTovars = [
         "price": "165 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Зелень",
-        "description": ""
+        "description": "",
+        "id": 19
     },
     {
         "img": "https://z-fermer.ru/images/shop/475_1.jpg",
@@ -157,7 +176,8 @@ export const testTovars = [
         "price": "125 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 20
     },
     {
         "img": "https://z-fermer.ru/images/shop/476_1.jpg",
@@ -165,7 +185,8 @@ export const testTovars = [
         "price": "48 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 21
     },
     {
         "img": "https://z-fermer.ru/images/shop/301_1.jpg",
@@ -173,7 +194,8 @@ export const testTovars = [
         "price": "58 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 22
     },
     {
         "img": "https://z-fermer.ru/images/shop/592_1.jpg",
@@ -181,7 +203,8 @@ export const testTovars = [
         "price": "36 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 23
     },
     {
         "img": "https://z-fermer.ru/images/shop/474_1.jpg",
@@ -189,7 +212,8 @@ export const testTovars = [
         "price": "48 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 24
     },
     {
         "img": "https://z-fermer.ru/images/shop/726_1.jpg",
@@ -197,7 +221,8 @@ export const testTovars = [
         "price": "85 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 25
     },
     {
         "img": "https://z-fermer.ru/images/shop/561_1.jpg",
@@ -205,7 +230,8 @@ export const testTovars = [
         "price": "46 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 26
     },
     {
         "img": "https://z-fermer.ru/images/shop/693_1.jpg",
@@ -213,7 +239,8 @@ export const testTovars = [
         "price": "79 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 27
     },
     {
         "img": "https://z-fermer.ru/images/shop/591_1.jpg",
@@ -221,7 +248,8 @@ export const testTovars = [
         "price": "370 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 28
     },
     {
         "img": "https://z-fermer.ru/images/shop/1048_1.jpg",
@@ -229,7 +257,8 @@ export const testTovars = [
         "price": "230 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 29
     },
     {
         "img": "https://z-fermer.ru/images/shop/1047_1.jpg",
@@ -237,7 +266,8 @@ export const testTovars = [
         "price": "75 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 30
     },
     {
         "img": "https://z-fermer.ru/images/shop/275_1.jpg",
@@ -245,7 +275,8 @@ export const testTovars = [
         "price": "130 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 31
     },
     {
         "img": "https://z-fermer.ru/images/shop/1002_1.jpg",
@@ -253,7 +284,8 @@ export const testTovars = [
         "price": "230 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 32
     },
     {
         "img": "https://z-fermer.ru/images/shop/692_1.jpg",
@@ -261,7 +293,8 @@ export const testTovars = [
         "price": "130 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 33
     },
     {
         "img": "https://z-fermer.ru/images/shop/1054_1.jpg",
@@ -269,7 +302,8 @@ export const testTovars = [
         "price": "150 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 34
     },
     {
         "img": "https://z-fermer.ru/images/shop/282_1.jpg",
@@ -277,7 +311,8 @@ export const testTovars = [
         "price": "160 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 35
     },
     {
         "img": "https://z-fermer.ru/images/shop/1042_1.jpg",
@@ -285,7 +320,8 @@ export const testTovars = [
         "price": "150 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 36
     },
     {
         "img": "https://z-fermer.ru/images/shop/1009_1.jpg",
@@ -293,7 +329,8 @@ export const testTovars = [
         "price": "280 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 37
     },
     {
         "img": "https://z-fermer.ru/images/shop/1039_1.jpg",
@@ -301,7 +338,8 @@ export const testTovars = [
         "price": "220 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 38
     },
     {
         "img": "https://z-fermer.ru/images/shop/1038_1.jpg",
@@ -309,7 +347,8 @@ export const testTovars = [
         "price": "220 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 39
     },
     {
         "img": "https://z-fermer.ru/images/shop/1044_1.jpg",
@@ -317,7 +356,8 @@ export const testTovars = [
         "price": "150 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 40
     },
     {
         "img": "https://z-fermer.ru/images/shop/1040_1.jpg",
@@ -325,7 +365,8 @@ export const testTovars = [
         "price": "370 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 41
     },
     {
         "img": "https://z-fermer.ru/images/shop/1043_1.jpg",
@@ -333,42 +374,48 @@ export const testTovars = [
         "price": "150 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Овощи",
-        "description": ""
+        "description": "",
+        "id": 42
     },
     {
         "title": "Брусника свежемороженая от Галины Макаровой, 190 гр.",
         "price": "135 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Ягоды",
-        "description": ""
+        "description": "",
+        "id": 43
     },
     {
         "title": "Земляника лесная свежемороженая от Галины Макаровой, 150 гр.",
         "price": "295 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Ягоды",
-        "description": ""
+        "description": "",
+        "id": 44
     },
     {
         "title": "Малина свежемороженая от Галины Макаровой, 260 гр.",
         "price": "265 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Ягоды",
-        "description": ""
+        "description": "",
+        "id": 45
     },
     {
         "title": "Облепиха свежемороженая от Галины Макаровой, 190 гр.",
         "price": "147 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Ягоды",
-        "description": ""
+        "description": "",
+        "id": 46
     },
     {
         "title": "Черника свежемороженая от Галины Макаровой, 190 гр.",
         "price": "155 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Ягоды",
-        "description": ""
+        "description": "",
+        "id": 47
     },
     {
         "img": "https://z-fermer.ru/images/shop/1052_1.jpg",
@@ -376,7 +423,8 @@ export const testTovars = [
         "price": "105 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Ягоды",
-        "description": ""
+        "description": "",
+        "id": 48
     },
     {
         "img": "https://z-fermer.ru/images/shop/322_1.jpg",
@@ -384,7 +432,8 @@ export const testTovars = [
         "price": "280 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Ягоды",
-        "description": ""
+        "description": "",
+        "id": 49
     },
     {
         "img": "https://z-fermer.ru/images/shop/213_1.jpg",
@@ -392,7 +441,8 @@ export const testTovars = [
         "price": "155 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Ягоды",
-        "description": ""
+        "description": "",
+        "id": 50
     },
     {
         "img": "https://z-fermer.ru/images/shop/70_1.jpg",
@@ -400,7 +450,8 @@ export const testTovars = [
         "price": "95 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Ягоды",
-        "description": ""
+        "description": "",
+        "id": 51
     },
     {
         "img": "https://z-fermer.ru/images/shop/1050_1.jpg",
@@ -408,7 +459,8 @@ export const testTovars = [
         "price": "105 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Ягоды",
-        "description": ""
+        "description": "",
+        "id": 52
     },
     {
         "img": "https://z-fermer.ru/images/shop/1051_1.jpg",
@@ -416,7 +468,8 @@ export const testTovars = [
         "price": "237 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Ягоды",
-        "description": ""
+        "description": "",
+        "id": 53
     },
     {
         "img": "https://z-fermer.ru/images/shop/1049_1.jpg",
@@ -424,7 +477,8 @@ export const testTovars = [
         "price": "82 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Ягоды",
-        "description": ""
+        "description": "",
+        "id": 54
     },
     {
         "img": "https://z-fermer.ru/images/shop/909_1.jpg",
@@ -432,7 +486,8 @@ export const testTovars = [
         "price": "57 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Фрукты",
-        "description": ""
+        "description": "",
+        "id": 55
     },
     {
         "img": "https://z-fermer.ru/images/shop/762_1.jpg",
@@ -440,7 +495,8 @@ export const testTovars = [
         "price": "139 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Фрукты",
-        "description": ""
+        "description": "",
+        "id": 56
     },
     {
         "img": "https://z-fermer.ru/images/shop/486_1.jpg",
@@ -448,7 +504,8 @@ export const testTovars = [
         "price": "98 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Фрукты",
-        "description": ""
+        "description": "",
+        "id": 57
     },
     {
         "img": "https://z-fermer.ru/images/shop/901_1.jpg",
@@ -456,28 +513,32 @@ export const testTovars = [
         "price": "139 ₽/кг",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Фрукты",
-        "description": ""
+        "description": "",
+        "id": 58
     },
     {
         "title": "Можжевельник ягоды от Валерия Дунькова. 50 гр.",
         "price": "100 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Сушеные ягоды, фрукты",
-        "description": ""
+        "description": "",
+        "id": 59
     },
     {
         "title": "Можжевельник ягоды от Максима Астахова. 60 гр.",
         "price": "160 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Сушеные ягоды, фрукты",
-        "description": ""
+        "description": "",
+        "id": 60
     },
     {
         "title": "Рябина сушеная от Валерия Дунькова. 50 гр.",
         "price": "110 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Сушеные ягоды, фрукты",
-        "description": ""
+        "description": "",
+        "id": 61
     },
     {
         "img": "https://z-fermer.ru/images/shop/517_1.jpg",
@@ -485,7 +546,8 @@ export const testTovars = [
         "price": "110 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Сушеные ягоды, фрукты",
-        "description": ""
+        "description": "",
+        "id": 62
     },
     {
         "img": "https://z-fermer.ru/images/shop/341_1.jpg",
@@ -493,7 +555,8 @@ export const testTovars = [
         "price": "60 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Сушеные ягоды, фрукты",
-        "description": ""
+        "description": "",
+        "id": 63
     },
     {
         "img": "https://z-fermer.ru/images/shop/340_1.jpg",
@@ -501,7 +564,7 @@ export const testTovars = [
         "price": "55 ₽/шт",
         "category": "Овощи/Фрукты/Ягоды",
         "type": "Сушеные ягоды, фрукты",
-        "description": ""
-    },
-
+        "description": "",
+        "id": 64
+    }
 ];
