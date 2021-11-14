@@ -58,7 +58,7 @@
 
     function deleteSelected() {
         $productsCart = $productsCart.filter(e => !e.selected)
-        let productsId = $productsCart.map(e => {return e.id});
+        let productsId = $productsCart.map(e => e.id);
         localStorage['cart'] = JSON.stringify(json.filter(e => productsId.includes(e.id)))
         update()
     }
