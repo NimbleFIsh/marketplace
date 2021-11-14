@@ -34,7 +34,7 @@
             <div class="item-info-text-title">{product.title}</div>
             <div class="item-info-text-description">{product.description}</div>
         </div>
-        <div class="item-delete-btn">
+        <div class="item-delete-btn" on:click={() => dispatch('delete', product.id)}>
             Удалить
         </div>
     </div>

@@ -2,24 +2,6 @@
     import CartListItem from "../components/CartListItem.svelte";
     import {writable} from 'svelte/store';
 
-    let json = JSON.parse(localStorage['cart'])
-
-    let productsCart = writable(json.map(e => {
-        e['selected'] = true;
-        e['count'] = 1;
-        e['price'] = Number(e['price'].substr(0, e['price'].length - 4))
-        return e
-    }));
-
-    let sum = writable(0);
-    let count = writable(0);
-
-
-
-    let allSelected = writable(true);
-
-    update()
-
     let regions = [
         {id: 1, name: "Волжск", price: 100 * 20},
         {id: 2, name: "Козьмодемьянск", price: 121 * 20},
@@ -38,6 +20,24 @@
     ];
     let selected = regions[0];
 
+    let json = JSON.parse(localStorage['cart'])
+
+    let productJson = JSON.parse(JSON.stringify(json))
+
+    let productsCart = writable(productJson.map(e => {
+        e['selected'] = true;
+        e['count'] = 1;
+        e['price'] = Number(e['price'].substr(0, e['price'].length - 4))
+        return e
+    }));
+
+    let sum = writable(0);
+    let count = writable(0);
+
+    let allSelected = writable(true);
+
+    update()
+
     function update() {
         $sum = 0;
         $count = 0;
@@ -48,6 +48,17 @@
             }
         });
         $allSelected = $productsCart.filter(e => !e.selected).length === 0;
+    }
+
+    function deleteProduct(product) {
+        $productsCart = $productsCart.filter(e => e.id !== product.detail)
+        localStorage['cart'] = JSON.stringify(json.filter(e => e.id !== product.detail))
+    }
+
+    function deleteSelected() {
+        $productsCart = $productsCart.filter(e => !e.selected)
+        let productsId = $productsCart.map(e => {return e.id});
+        localStorage['cart'] = JSON.stringify(json.filter(e => productsId.includes(e.id)))
     }
 
     function selectAll() {
@@ -85,7 +96,7 @@
                             <div class="checkbox-holder" on:click={selectAll}>
                                 <input type="checkbox" bind:checked={$allSelected}> Выбрать все
                             </div>
-                            <div class="selector-deleteAll" on:click={() => {alert("Не работает в MVP")}}>Удалить выбраные</div>
+                            <div class="selector-deleteAll" on:click={deleteSelected}>Удалить выбраные</div>
                         </div>
                         <div class="products-card-inner">
                             <div class="card-order-delivery">
@@ -109,7 +120,7 @@
                             </div>
                             <div class="card-list">
                                 {#each $productsCart as product}
-                                    <CartListItem {product} on:change={update}/>
+                                    <CartListItem {product} on:change={update} on:delete={deleteProduct}/>
                                 {/each}
                             </div>
                         </div>
