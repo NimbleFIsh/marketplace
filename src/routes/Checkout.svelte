@@ -52,7 +52,8 @@
 
     function deleteProduct(product) {
         $productsCart = $productsCart.filter(e => e.id !== product.detail)
-        localStorage['cart'] = JSON.stringify(json.filter(e => e.id !== product.detail))
+        json = json.filter(e => e.id !== product.detail)
+        localStorage['cart'] = JSON.stringify(json)
         update()
     }
 
