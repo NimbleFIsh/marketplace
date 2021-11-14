@@ -21,10 +21,10 @@
         </div>
         <div class="header-inner-nav_bar">
             <nav class="nav-bar">
-                <div class="nav-bar-item" on:click={() => dispatch('profileBtn')}>Профиль</div>
+                <div class="nav-bar-item" on:click={() => navigate('/')}>Товары</div>
                 <div class="nav-bar-item" on:click={() => dispatch('cartBtn')}>Корзина</div>
-                <div class="nav-bar-item" on:click={() => dispatch('orderBtn')}>Заказы</div>
-                <div class="nav-bar-item" on:click={() => dispatch('favoriteBtn')}>Избраное</div>
+                <div class="nav-bar-item" on:click={() => alert('Не работает на стадии MVP')}>Профиль</div>
+                <div class="nav-bar-item" on:click={() => alert('Не работает на стадии MVP')}>Заказы</div>
                 <div class="nav-bar-item-last"></div>
             </nav>
             <div class="header-inner-enter" on:click={() => dispatch('enterBtn')}>
