@@ -53,12 +53,14 @@
     function deleteProduct(product) {
         $productsCart = $productsCart.filter(e => e.id !== product.detail)
         localStorage['cart'] = JSON.stringify(json.filter(e => e.id !== product.detail))
+        update()
     }
 
     function deleteSelected() {
         $productsCart = $productsCart.filter(e => !e.selected)
         let productsId = $productsCart.map(e => {return e.id});
         localStorage['cart'] = JSON.stringify(json.filter(e => productsId.includes(e.id)))
+        update()
     }
 
     function selectAll() {
